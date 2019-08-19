@@ -12,8 +12,27 @@ const bot = new Discord.Client();
 console.log('Hello', process.env.dbl_token);
 
 bot.on('ready', () => {
-  console.log('bangbangbot is online!');
+  console.log(`Logged in as ${bot.user.tag}`)
+  bot.channels.find(x => x.name === 'test').send('Hello!')
 });
+
+bot.on('message', message => {
+
+    if (message.author.bot) return;
+    const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g)
+    const command = args.shift().toLowerCase();
+    console.log(`Processing command "${command}"`);
+
+    if (message.content.indexOf(process.env.prefix) !== 0) return;
+
+    try {
+        message.channel.send(`Hello ${message.author}!`)
+        let commandFile = require(`./commands/${command}.js`);
+        commandFile.run(bot, message, args)
+    } catch (err) {
+        return;
+    }
+})
 
 // Create an event listener for messages
 bot.on('message', message => {
@@ -21,7 +40,7 @@ bot.on('message', message => {
     // message.channel.send('pong');
     console.log('I received a call :) ');
     console.log('The call is from ', message.author.username);
-    message.reply('hong kong');
+    message.reply('hong kong'); //appends senders mention, i think.
     console.log(message.channel);
   }
 });

@@ -19,7 +19,9 @@
   "dependencies": {
     "dblapi.js": "^2.3.0",
     "discord.js": "^11.5.1",
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.0.0-b22"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
