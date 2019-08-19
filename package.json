@@ -1,0 +1,27 @@
+{
+  "name": "bangbangbot",
+  "version": "1.0.0",
+  "description": "A discord bot that automates daily stand-ups and check-ins. A must-have agile tool for managing remote teams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianapeace/bangbangbot.git"
+  },
+  "author": "Juliana Mei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianapeace/bangbangbot/issues"
+  },
+  "homepage": "https://github.com/julianapeace/bangbangbot#readme",
+  "dependencies": {
+    "dblapi.js": "^2.3.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
