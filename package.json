@@ -24,6 +24,6 @@
     "quick.db": "^7.0.0-b22"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.22"
   }
 }
